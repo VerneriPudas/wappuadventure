@@ -2,7 +2,7 @@ from event_class import Event
 
 events = {
     "start": Event(
-        "###    Tervetuloa Ouluun! Valitse hahmoluokkasi!    ###",
+        "###    Tervetuloa Ouluun! Valitse hahmoluokkasi!    ###", "tervetuloa.txt",
         {
             "Chad Vibecoder": {
                 "next_event": "wapunAlku",
@@ -20,7 +20,7 @@ events = {
     ),
     ### Aloitus ###
     "wapunAlku": Event(
-        "Ja näin Wappu alkaa! Ennen kuin pääset juhlimaan, sinun on kuitenkin selvitettävä mitä haluat Wappuna tehdä.",
+        "Ja näin Wappu alkaa! Ennen kuin pääset juhlimaan, sinun on kuitenkin selvitettävä mitä haluat Wappuna tehdä.", None,
         {
             "Mene jonottamaan lippuja Wappubileisiin": {
                 "next_event": "jonotus"
@@ -34,7 +34,7 @@ events = {
         }
     ),
     "jonotus": Event(
-        "Jonotat lippuja Wappubileisiin koko yön. Miten vietät aikasi lippujonossa?",
+        "Jonotat lippuja Wappubileisiin koko yön. Miten vietät aikasi lippujonossa?", "jonotus.txt",
         {
             "Istu nätisti paikallasi ja odota": {
                 "next_event": "sait_liput",
@@ -51,7 +51,7 @@ events = {
         }
     ),
     "omat_bileet": Event(
-        "Olet järjestämässä omat bileet. Minkälaiset bileet järjestät?",
+        "Olet järjestämässä omat bileet. Minkälaiset bileet järjestät?", "omantBileet.txt",
         {
             "Järjestän sitsit!": {
                 "next_event": "sitsit"
@@ -65,7 +65,7 @@ events = {
         }
     ),
     "hodlaaminen": Event(
-        "Menetit rahasi, miten copetat",
+        "Menetit rahasi, miten copetat", None,
         {
             "Diamond hands hodl": {
                 "next_event": "itssoover"
@@ -79,12 +79,12 @@ events = {
         }
     ),
     "itssoover": Event(
-        "Olet menettänyt kaikki rahasi ja olet täysin varaton. Wappu on ohi sinulle. Kiitos pelistä!",
+        "Olet menettänyt kaikki rahasi ja olet täysin varaton. Wappu on ohi sinulle. Kiitos pelistä!", None,
         {}
     ),
     ### Minimoi tappiot ###
     "MinimoiTappiot": Event(
-        "Päätät minimoi tappiot ja lähdet bilettämään. Mihin aiot mennä?",
+        "Päätät minimoi tappiot ja lähdet bilettämään. Mihin aiot mennä?", "minimoiTappiot.txt",
         {
             "Baariin": {
                 "next_event": "baari",
@@ -99,7 +99,7 @@ events = {
         }
     ),
     "baari": Event(
-        "Baari on täynnä opiskelijoita ja Wappua juhlivia. Huomaat kuitenkin, että tililläsi on vain 5 euroa. ",
+        "Baari on täynnä opiskelijoita ja Wappua juhlivia. Huomaat kuitenkin, että tililläsi on vain 5 euroa. ", None,
         {
             "Ostan niin paljon olutta kuin viidellä eurolla saa": {
                 "next_event": "WaatonAattoAamu",
@@ -115,7 +115,7 @@ events = {
     ),
     "fribeer": Event(
         "Päätit mennä pelaamaan fribeeria. Huomaat, että fribeer on kustannustehokasta jos tiimisi tarjoaa kaljat. " \
-        "Miten hyvin aiot pelata?",
+        "Miten hyvin aiot pelata?", None,
         {
             "Pelaan niin hyvin kuin osaan": {
                 "next_event": "WaatonAattoAamu",
@@ -134,7 +134,7 @@ events = {
     ### Omat bileet ###
     "sitsit": Event(
         "Päätit järjestää sitsit. Sitsit ovat täynnä juomista ja laulamista. " \
-        "Kenet kutsut seremoniamestariksi?",
+        "Kenet kutsut seremoniamestariksi?", "omatBileet.txt",
         {
             "Päätän olla seremoniamestari itse": {
                 "next_event": "itesere"
@@ -151,7 +151,7 @@ events = {
         }
     ),
     "jokurando": Event(
-        "Seremoniamestarina toimii randomi joka ei osaa mitään. Sitsit menevät pieleen, mutta tulipahan ryypättyä!.",
+        "Seremoniamestarina toimii randomi joka ei osaa mitään. Sitsit menevät pieleen, mutta tulipahan ryypättyä!.", None,
         {
             "Ainakin mulla oli hauska": {
                 "next_event": "waatonAattoAamu",
@@ -164,7 +164,7 @@ events = {
     ),
     "sikaTulee": Event(
         "Seremoniamestarina toimii OTYn kulttuurisika. Sitsisi kuulostivat niin eeppisiltä, että hän päätti jättää OTYn sitsit väliin ja tulla sinun bileisiin." \
-        "Hän osaa laulaa ja juoda. Sitsit menevät hyvin ja kaikki nauttivat.",
+        "Hän osaa laulaa ja juoda. Sitsit menevät hyvin ja kaikki nauttivat.", None,
         {
             "HYVÄT YSTÄVÄT LAULU VOI ALKAA": {
                 "next_event": "waatonAattoAamu",
@@ -173,7 +173,7 @@ events = {
         }
     ),
     "sikaEiTule": Event(
-        "Seremoniamestariksi kutsuttu kulttuurisika ei saapunut paikalle. Vittu.",
+        "Seremoniamestariksi kutsuttu kulttuurisika ei saapunut paikalle. Vittu.", None,
         {
             "No höh :/": {
                 "next_event": "waatonAattoAamu"
@@ -182,7 +182,7 @@ events = {
     ),
     "itesere": Event(
         "Seremoniamestarina toimii sinä itse. Sitsit menevät hyvin ja kaikki nauttivat." \
-        "Et kuitenkaan itse kerinnyt nauttia tunnelmasta, koska olit sitsien järjestäjä ja seremoniamestari",
+        "Et kuitenkaan itse kerinnyt nauttia tunnelmasta, koska olit sitsien järjestäjä ja seremoniamestari", None,
         {
             "No höh :/": {
                 "next_event": "waatonAattoAamu"
@@ -190,7 +190,7 @@ events = {
         }
     ),
     "kotibileet": Event(
-        "Järjestät bileet kotonasi. Raju biletys summonaa miekkataksin pihalle ja sinivuokot tulevat laittamaan stopin bileille. Vittu.",
+        "Järjestät bileet kotonasi. Raju biletys summonaa miekkataksin pihalle ja sinivuokot tulevat laittamaan stopin bileille. Vittu.", None,
         {
             "No höh :/": {
                 "next_event": "waatonAattoAamu",
@@ -199,7 +199,7 @@ events = {
         }
     ),
     "uitto": Event(
-        "Onneksi olkoon kävit ojassa uimassa maalarinhattu päässä. Ainakin nyt on raikas olo!",
+        "Onneksi olkoon kävit ojassa uimassa maalarinhattu päässä. Ainakin nyt on raikas olo!", None,
         {
             "Hell yeah brother!": {
                 "next_event": "waatonAattoAamu",
@@ -209,7 +209,7 @@ events = {
     ),
     ### Etkot ###
     "sait_liput": Event(
-        "Jes! Sait liput Wappubileisiin! Miten aiot etkoilla?",
+        "Jes! Sait liput Wappubileisiin! Miten aiot etkoilla?", "etkot.txt",
         {
             "Taidanpa riipasta kovat kännit": {
                 "next_event": "jotain_meni_pieleen",
@@ -230,7 +230,7 @@ events = {
     ),
     "vartija": Event(
         "Vartija huomaa sinun nauttivan päihtymishuippausaineita ja nakkaa sinut ulos." \
-        "Et saa lippuja bileisiin. Olet jäänyt Wappubileistä paitsi.",
+        "Et saa lippuja bileisiin. Olet jäänyt Wappubileistä paitsi.", None,
         {
             "Katkeroidu ja komeroidu loppu Wapuksi": {
                 "next_event": "end",
@@ -243,7 +243,7 @@ events = {
     ),
     "katakombit": Event(
         "Katakombeissa on pimeää ja kylmää. Näet vanhan viinipullon nököttävän sähkökaapin päällä." \
-        "Napattuasi pullon, huomaat että olet jäänyt yksisuuntaisen palo-oven taakse. Muutut klonkuksi.",
+        "Napattuasi pullon, huomaat että olet jäänyt yksisuuntaisen palo-oven taakse. Muutut klonkuksi.", None,
         {
             "Olen nyt katakombien klonkku": {
                 "next_event": "end",
@@ -253,7 +253,7 @@ events = {
     ),
     "duotrigordle": Event(
         "'Duotrigordle on niinku Wordle, mutta niitä on 32 ruudukos- Hei mihin sinä menet?' " \
-        "Pelaat loppuelämäsi duotrigordlea ja jäät Wappubileistä paitsi.",
+        "Pelaat loppuelämäsi duotrigordlea ja jäät Wappubileistä paitsi.", None,
         {
             "Olen nyt duotrigordlen mestari": {
                 "next_event": "end",
@@ -264,7 +264,7 @@ events = {
     ### Wappubileet ###
     "HypeHypeHype": Event(
         "Hullun hypetyksen jälkeen on aika lähteä bileisiin! Olet saanut paljon uusia ystäviä ja kaikki rakastavat sinua!" \
-        "Olet tämän Wapun elävä legenda! Jatkoille?",
+        "Olet tämän Wapun elävä legenda! Jatkoille?", "wappuBileet.txt",
         {
             "Päätyyn!": {
                 "next_event": "Jatkot",
@@ -278,7 +278,7 @@ events = {
     ),
     "HauskaTurbokänniBileissä": Event(
         "Olet saavuttanut kuuluisan turbokännin. Olet saanut paljon uusia ystäviä. Kaikki rakastavat sinua ja olet tämän Wapun elävä legenda!" \
-        "Jatkoille?",
+        "Jatkoille?", None,
         {
             "Päätyyn!": {
                 "next_event": "Jatkot",
@@ -293,7 +293,7 @@ events = {
     ### Jatkot ###
     "Jatkot": Event(
         "Joku typerä fuksi isännöi jatkoja. Jatkoilla on paljon juomista ja pelailua. " \
-        "Miten aiot viettää jatkoja?",
+        "Miten aiot viettää jatkoja?", "jatkot.txt",
         {
             "Pelaan juomapelejä ja juon": {
                 "next_event": "WaatonAattoAamuFuksinSängyssä",
@@ -317,7 +317,7 @@ events = {
     ### Waaton aatto ###
     "öärg...": Event(
         "Örgh! Olet niin kännissä, ettet muista mitään. Heräät aamulla sängystäsi ja huomaat, että olet jäänyt Wappubileistä paitsi." \
-        "Krapula painaa ja päätä särkee. Waatonaatto sarastaa jo. Pitäisikö yrittää käydä kuitenkin suikussa ennenkuin lähdet?",
+        "Krapula painaa ja päätä särkee. Waatonaatto sarastaa jo. Pitäisikö yrittää käydä kuitenkin suikussa ennenkuin lähdet?", "waatonAatto.txt",
         {
             "Olen paska perse läpeensä. Suihkuttelu on heikoille!": {
                 "next_event": "WaatonAatto",
@@ -329,9 +329,9 @@ events = {
             }
         }
     ),
-    "Mitä helvettiä?": Event(
+    "WaatonAattoAamuFuksinSängyssä": Event(
         "'Mitä helvettiä? Missä vitussa minä olen?' Olit niin kännissä, ettet muista mitään. Heräät Waatonaatto aamulla jonkun fuksin sängystä." \
-        "'Mitä sitä on oikein tehnyt?' Nyt kyllä morkkis painaa.",
+        "'Mitä sitä on oikein tehnyt?' Nyt kyllä morkkis painaa.", None,
         {
             "Waatonaatto bileisiin käymättä lähtöruudun kautta!": {
                 "next_event": "WaatonAatto",
@@ -344,7 +344,7 @@ events = {
         }
     ),
     "waatonAattoAamu": Event(
-        "Waaton aaton riennot odottovat sinua! Miten aiot viettää Waaton aattoa?",
+        "Waaton aaton riennot odottovat sinua! Miten aiot viettää Waaton aattoa?", None,
         {
             "Hikkyilen kotona": {
                 "skill_check": ("älykkyys", 20),
@@ -366,7 +366,7 @@ events = {
         }
     ),
     "legendaarinen_kpk": Event(
-        "Legendaariset kännitoilailut jäävät muistoihisi ikuisiksi ajoiksi ja naurattavat vielä vuosia",
+        "Legendaariset kännitoilailut jäävät muistoihisi ikuisiksi ajoiksi ja naurattavat vielä vuosia", None,
         {
             "Hell yeah brother!": {
                 "next_event": "end"
@@ -374,7 +374,7 @@ events = {
         }
     ),
     "legendaarinen_kpk_fail": Event(
-        "Aikahyppy huomiseen ja krapulaan. Mitä vittua tuli tehtyä?",
+        "Aikahyppy huomiseen ja krapulaan. Mitä vittua tuli tehtyä?", None,
         {
             "'Miksi aina mulle käy näin?'": {
                 "next_event": "end"
@@ -382,7 +382,7 @@ events = {
         }
     ),
     "millasta_sais_olla": Event(
-        "Minkälaista elintä haluaisit?",
+        "Minkälaista elintä haluaisit?", None,
         {
             "Teekkari": {
                 "skill_check": ("karisma", 20),
@@ -408,7 +408,7 @@ events = {
         }
     ),
     "sait_elintä": Event(
-        "Sait Wappuheilan! Yhdessä seuraatte Wappuauringon nousua ja matineoitte matineassa",
+        "Sait Wappuheilan! Yhdessä seuraatte Wappuauringon nousua ja matineoitte matineassa", None,
         {
             "Jabadabaduu ja panemisiin!": {
                 "next_event": "selvisit"
@@ -416,7 +416,7 @@ events = {
         }
     ),
     "et_saanut_elintä": Event(
-        "Ei Wappuheilaa sinulle! Aika incelöityä.",
+        "Ei Wappuheilaa sinulle! Aika incelöityä.", None,
         {
             "No höh :/": {
                 "next_event": "selvisit"
@@ -425,7 +425,7 @@ events = {
     ),
     "hikkyile_hyvissä_fiiliksissä": Event(
         "Hikkyilet kotona, mutta teet sen omasta tahdostasi ja hyvissä fiiliksissä. " \
-        "Nautit olostasi",
+        "Nautit olostasi", None,
         {
             "Jatka hikkyilyä": {
                 "next_event": "selvisit"
@@ -434,7 +434,7 @@ events = {
     ),
     "hikkyile_hyvissä_fiiliksissä": Event(
         "Hikkyilet kotona, mutta jokin jäi kaihertamaan. 'Millos se Wappu olikaan?'" \
-        "FOMO painaa ja mietit, että olisit voinut lähteä bileisiin.",
+        "FOMO painaa ja mietit, että olisit voinut lähteä bileisiin.", None,
         {
             "Jatka hikkyilyä": {
                 "next_event": "selvisit"
@@ -444,15 +444,15 @@ events = {
     ### Selvisit ###
     "selvisit": Event(
         "Selvisit Waaton aaton bileistä ja olet valmis juhlimaan Wappua!" \
-        "Tämä peli päättyy tähän, mutta kerro toki ystävillesi tästä pelistä ja vertailkaa vaikka pisteitä emt",
+        "Tämä peli päättyy tähän, mutta kerro toki ystävillesi tästä pelistä ja vertailkaa vaikka pisteitä emt", "selvisit.txt",
         {}
     ),
     "jotain_meni_pieleen": Event(
-        "Tässä pelissä ei ole tämmöistä reittiä eli jotain meni koodin puolella pieleen. Peli loppuu tähän.",
+        "Tässä pelissä ei ole tämmöistä reittiä eli jotain meni koodin puolella pieleen. Peli loppuu tähän.", None,
         {}
     ),
     "end": Event(
-        "Se oli siinä!",
+        "Se oli siinä!", None,
         {}
     )
 }

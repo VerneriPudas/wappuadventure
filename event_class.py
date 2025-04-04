@@ -1,6 +1,7 @@
 class Event:
-    def __init__(self, description, choices):
+    def __init__(self, description, graphics, choices):
         self.description = description
+        self.graphics = graphics
         self.choices = choices
 
     def display(self, player):
@@ -13,6 +14,12 @@ class Event:
         # Convert choices into a numbered list
         choice_list = list(self.choices.keys())
         choice_map = {str(i + 1): choice_list[i] for i in range(len(choice_list))}
+
+        # If there's a graphic
+        if self.graphics is not None:
+            with open("graphics/" + self.graphics, "r", encoding="utf-8") as file:
+                print(file.read())
+            
 
         print("\nMitä teet?")
         for number, choice in choice_map.items():
