@@ -51,7 +51,7 @@ events = {
         }
     ),
     "omat_bileet": Event(
-        "Olet järjestämässä omat bileet. Minkälaiset bileet järjestät?", "omantBileet.txt",
+        "Olet järjestämässä omat bileet. Minkälaiset bileet järjestät?", "omatBileet.txt",
         {
             "Järjestän sitsit!": {
                 "next_event": "sitsit"
@@ -154,11 +154,11 @@ events = {
         "Seremoniamestarina toimii randomi joka ei osaa mitään. Sitsit menevät pieleen, mutta tulipahan ryypättyä!.", None,
         {
             "Ainakin mulla oli hauska": {
-                "next_event": "waatonAattoAamu",
+                "next_event": "WaatonAattoAamu",
                 "happening": {"wappufiilis": 5}
             },
             "No höh :/": {
-                "next_event": "waatonAattoAamu"
+                "next_event": "WaatonAattoAamu"
             }
         }
     ),
@@ -167,7 +167,7 @@ events = {
         "Hän osaa laulaa ja juoda. Sitsit menevät hyvin ja kaikki nauttivat.", None,
         {
             "HYVÄT YSTÄVÄT LAULU VOI ALKAA": {
-                "next_event": "waatonAattoAamu",
+                "next_event": "WaatonAattoAamu",
                 "happening": {"wappufiilis": 500}
             }
         }
@@ -176,7 +176,7 @@ events = {
         "Seremoniamestariksi kutsuttu kulttuurisika ei saapunut paikalle. Vittu.", None,
         {
             "No höh :/": {
-                "next_event": "waatonAattoAamu"
+                "next_event": "WaatonAattoAamu"
             }
         }
     ),
@@ -185,7 +185,7 @@ events = {
         "Et kuitenkaan itse kerinnyt nauttia tunnelmasta, koska olit sitsien järjestäjä ja seremoniamestari", None,
         {
             "No höh :/": {
-                "next_event": "waatonAattoAamu"
+                "next_event": "WaatonAattoAamu"
             }
         }
     ),
@@ -193,7 +193,7 @@ events = {
         "Järjestät bileet kotonasi. Raju biletys summonaa miekkataksin pihalle ja sinivuokot tulevat laittamaan stopin bileille. Vittu.", None,
         {
             "No höh :/": {
-                "next_event": "waatonAattoAamu",
+                "next_event": "WaatonAattoAamu",
                 "happening": {"wappufiilis": -5}
             }
         }
@@ -202,7 +202,7 @@ events = {
         "Onneksi olkoon kävit ojassa uimassa maalarinhattu päässä. Ainakin nyt on raikas olo!", None,
         {
             "Hell yeah brother!": {
-                "next_event": "waatonAattoAamu",
+                "next_event": "WaatonAattoAamu",
                 "happening": {"wappufiilis": 5}
             },
         }
@@ -343,7 +343,7 @@ events = {
             },
         }
     ),
-    "waatonAattoAamu": Event(
+    "WaatonAattoAamu": Event(
         "Waaton aaton riennot odottovat sinua! Miten aiot viettää Waaton aattoa?", None,
         {
             "Hikkyilen kotona": {
@@ -432,7 +432,7 @@ events = {
             }
         }
     ),
-    "hikkyile_hyvissä_fiiliksissä": Event(
+    "hikkyile_huonoissa_fiiliksissä": Event(
         "Hikkyilet kotona, mutta jokin jäi kaihertamaan. 'Millos se Wappu olikaan?'" \
         "FOMO painaa ja mietit, että olisit voinut lähteä bileisiin.", None,
         {
